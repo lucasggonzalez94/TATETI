@@ -1,0 +1,153 @@
+body {
+    background-color: rgb(223, 223, 223);
+    font-family: 'Fredoka One', cursive;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#tablero {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border: 6px solid rgb(250, 183, 0);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#celda1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 15px 0 0 0;
+    -webkit-border-radius: 15px 0 0 0;
+    -moz-border-radius: 15px 0 0 0;
+    -ms-border-radius: 15px 0 0 0;
+    -o-border-radius: 15px 0 0 0;
+}
+
+#celda2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+#celda3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 0 15px 0 0;
+    -webkit-border-radius: 0 15px 0 0;
+    -moz-border-radius: 0 15px 0 0;
+    -ms-border-radius: 0 15px 0 0;
+    -o-border-radius: 0 15px 0 0;
+}
+
+#celda4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+#celda5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+
+#celda6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+#celda7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 0 0 15px 0;
+    -webkit-border-radius: 0 0 0 15px;
+    -moz-border-radius: 0 0 0 15px;
+    -ms-border-radius: 0 0 0 15px;
+    -o-border-radius: 0 0 0 15px;
+}
+
+#celda8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+}
+
+#celda9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-radius: 0 0 0 15px;
+    -webkit-border-radius: 0 0 15px 0;
+    -moz-border-radius: 0 0 15px 0;
+    -ms-border-radius: 0 0 15px 0;
+    -o-border-radius: 0 0 15px 0;
+}
+
+svg {
+    position: absolute;
+}
+
+#mensaje {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.error {
+    background-color: #ebb7b7;
+    color: #dd0000;
+    border: 2px solid #dd0000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.success {
+    background-color: #b7ebba;
+    color: #008a17;
+    border: 2px solid #008a17;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
