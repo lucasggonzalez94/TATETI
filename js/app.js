@@ -9,7 +9,6 @@ const celda6 = document.querySelector('#celda6')
 const celda7 = document.querySelector('#celda7')
 const celda8 = document.querySelector('#celda8')
 const celda9 = document.querySelector('#celda9')
-const mensaje = document.querySelector('#mensaje')
 
 // Variables globales
 let jugador = true
@@ -116,6 +115,7 @@ function verificarGanador(){
     if (numCeldasDisponibles === 1){
         removerEvenListener()
         insertarMensajes('No quedan celdas disponibles, el juego terminó.', '', false)
+        insertarBotonRestart(false)
     }
     
     let aux = 0
@@ -136,6 +136,7 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
     if(mapa[3] === mapa[4] && mapa[4] === mapa[5] && mapa[3] !== 0) {
         celda4.style = 'background-color: lime'
@@ -147,6 +148,7 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
     if(mapa[6] === mapa[7] && mapa[7] === mapa[8] && mapa[6] !== 0) {
         celda7.style = 'background-color: lime'
@@ -158,6 +160,7 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
     //Las líneas verticales
     if(mapa[0] === mapa[3] && mapa[3] === mapa[6] && mapa[0] !== 0) {
@@ -170,6 +173,7 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
     if(mapa[1] === mapa[4] && mapa[4] === mapa[7] && mapa[1] !== 0) {
         celda2.style = 'background-color: lime'
@@ -181,6 +185,7 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
     if(mapa[2] === mapa[5] && mapa[5] === mapa[8] && mapa[2] !== 0) {
         celda3.style = 'background-color: lime'
@@ -192,6 +197,7 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
     //Las diagonales
     if(mapa[0] === mapa[4] && mapa[4] === mapa[8] && mapa[0] !== 0) {
@@ -204,6 +210,7 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
     if(mapa[2] === mapa[4] && mapa[4] === mapa[6] && mapa[2] !== 0) {
         celda3.style = 'background-color: lime'
@@ -215,10 +222,12 @@ function verificarGanador(){
         }else {
             insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
         }
+        insertarBotonRestart(false)
     }
 }
 
 function insertarMensajes(leyenda, tipo, tiempo) {
+    const mensaje = document.querySelector('#mensaje')
     if(!mensaje.firstChild) {
         const parrafo = document.createElement('p')
         parrafo.textContent = leyenda
@@ -236,4 +245,25 @@ function insertarMensajes(leyenda, tipo, tiempo) {
             }, 3000)
         }
     }
+}
+
+function insertarBotonRestart(borrado) {
+    const restart = document.querySelector('#restart')
+    if (borrado) {
+        while (restart.firstChild) {
+            restart.removeChild(restart.firstChild)
+        }
+    } else {
+        const btnRestart = document.createElement('input')
+        btnRestart.type = 'button'
+        btnRestart.value = 'Reiniciar'
+        btnRestart.classList.add('boton')
+        btnRestart.addEventListener('click', reiniciarJuego)
+        restart.appendChild(btnRestart)
+    }
+}
+
+function reiniciarJuego() {
+    window.location.reload()
+    insertarBotonRestart(true)
 }
