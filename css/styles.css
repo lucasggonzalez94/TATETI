@@ -8,15 +8,30 @@ h1 {
     text-align: center;
 }
 
+#contenedor-tablero {
+    background-color: #c23232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    height: 430px;
+    margin: 0 auto;
+    border: 6px solid black;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
 #tablero {
     display: grid;
     grid-gap: 0;
     grid-template-columns: repeat(3, 1fr);
     width: 400px;
     height: 400px;
-    margin: 0 auto;
     background-color: white;
-    border: 6px solid rgb(250, 183, 0);
+    border: 6px solid black;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -38,6 +53,7 @@ h1 {
 }
 
 #celda2 {
+    background-color: rgb(39, 179, 197);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +76,7 @@ h1 {
 }
 
 #celda4 {
+    background-color: rgb(39, 179, 197);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +93,7 @@ h1 {
 }
 
 #celda6 {
+    background-color: rgb(39, 179, 197);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +116,7 @@ h1 {
 }
 
 #celda8 {
+    background-color: rgb(39, 179, 197);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -126,63 +126,95 @@ function verificarGanador(){
         }
     }
     // Las líneas horizontales
-    if(mapa[0] == mapa[1] && mapa[1] == mapa[2] && mapa[0] !=0) {
+    if(mapa[0] === mapa[1] && mapa[1] === mapa[2] && mapa[0] !== 0) {
         celda1.style = 'background-color: lime'
         celda2.style = 'background-color: lime'
         celda3.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', '', false)
+        if (mapa[0] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
-    if(mapa[3] == mapa[4] && mapa[4] == mapa[5] && mapa[3] !=0) {
+    if(mapa[3] === mapa[4] && mapa[4] === mapa[5] && mapa[3] !== 0) {
         celda4.style = 'background-color: lime'
         celda5.style = 'background-color: lime'
         celda6.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', false)
+        if (mapa[3] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
-    if(mapa[6] == mapa[7] && mapa[7] == mapa[8] && mapa[6] !=0) {
+    if(mapa[6] === mapa[7] && mapa[7] === mapa[8] && mapa[6] !== 0) {
         celda7.style = 'background-color: lime'
         celda8.style = 'background-color: lime'
         celda9.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', '', false)
+        if (mapa[6] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
     //Las líneas verticales
-    if(mapa[0] == mapa[3] && mapa[3] == mapa[6] && mapa[0] !=0) {
+    if(mapa[0] === mapa[3] && mapa[3] === mapa[6] && mapa[0] !== 0) {
         celda1.style = 'background-color: lime'
         celda4.style = 'background-color: lime'
         celda7.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', '', false)
+        if (mapa[0] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
-    if(mapa[1] == mapa[4] && mapa[4] == mapa[7] && mapa[1] !=0) {
+    if(mapa[1] === mapa[4] && mapa[4] === mapa[7] && mapa[1] !== 0) {
         celda2.style = 'background-color: lime'
         celda5.style = 'background-color: lime'
         celda8.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', '', false)
+        if (mapa[1] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
-    if(mapa[2] == mapa[5] && mapa[5] == mapa[8] && mapa[2] !=0) {
+    if(mapa[2] === mapa[5] && mapa[5] === mapa[8] && mapa[2] !== 0) {
         celda3.style = 'background-color: lime'
         celda6.style = 'background-color: lime'
         celda9.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', '', false)
+        if (mapa[2] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
     //Las diagonales
-    if(mapa[0] == mapa[4] && mapa[4] == mapa[8] && mapa[0] !=0) {
+    if(mapa[0] === mapa[4] && mapa[4] === mapa[8] && mapa[0] !== 0) {
         celda1.style = 'background-color: lime'
         celda5.style = 'background-color: lime'
         celda9.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', '', false)
+        if (mapa[0] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
-    if(mapa[2] == mapa[4] && mapa[4] == mapa[6] && mapa[2] !=0) {
+    if(mapa[2] === mapa[4] && mapa[4] === mapa[6] && mapa[2] !== 0) {
         celda3.style = 'background-color: lime'
         celda5.style = 'background-color: lime'
         celda7.style = 'background-color: lime'
         removerEvenListener()
-        insertarMensajes('El juego terminó!', '', false)
+        if (mapa[2] === 1) {
+            insertarMensajes('El juego terminó! Ganó el jugador azul (X)', '', false)
+        }else {
+            insertarMensajes('El juego terminó! Ganó el jugador rojo (O)', '', false)
+        }
     }
 }
 
